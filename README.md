@@ -13,7 +13,7 @@
 - Many options can be configured via application.(yml|properties) file.
 
 ### Getting Started
-This project is built with [maven](https://maven.apache.org/). Simply clone the repo and run `mvn clean install` to get a build in your local repository. Future versions will soon be available via [Github Packages](https://github.com/features/packages) and eventually [Maven Central](https://search.maven.org/).
+This project is built with [maven](https://maven.apache.org/). Simply clone the repo and run `mvn clean install` to get a build in your local repository. Future versions will be available via [Maven Central](https://search.maven.org/).
 
 ### Project Origin
 This project was inspired by the original work of [Domagoj Madunic](https://github.com/dmadunic) and the [ag04-shell-utils](https://github.com/ag04/ag04-shell-utils) project.

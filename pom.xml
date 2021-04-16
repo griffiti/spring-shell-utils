@@ -5,7 +5,7 @@
 
 	<groupId>net.griffiti</groupId>
 	<artifactId>spring-shell-utils</artifactId>
-	<version>0.0.18-SNAPSHOT</version>
+	<version>0.0.21-SNAPSHOT</version>
 	<name>spring-shell-utils</name>
 	<description>Spring Shell utility library for Spring Shell applications.</description>
 
@@ -82,11 +82,4 @@
 		</dependency>
 	</dependencies>
 
-	<distributionManagement>
-   <repository>
-     <id>github</id>
-     <name>GitHub Apache Maven Packages</name>
-     <url>https://maven.pkg.github.com/griffiti/spring-shell-utils</url>
-   </repository>
-</distributionManagement>
 </project>

@@ -1,6 +1,9 @@
 package net.griffiti.shell.custom;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.PrintStream;
 import java.nio.file.Files;
 
@@ -19,12 +22,15 @@ public class CustomBanner implements Banner {
     out.print(ConsoleSequences.CLS);
 
     try {
-      String fileName = "splash.txt";
-      ClassLoader classLoader = CustomBanner.class.getClassLoader();
+      String fileName = "/splash.txt";
+      InputStream stream = getClass().getResourceAsStream(fileName);
+      BufferedReader reader = new BufferedReader(new InputStreamReader(stream));
 
-      File file = new File(classLoader.getResource(fileName).getFile());
-      String fileContent = new String(Files.readAllBytes(file.toPath()));
-      System.out.println(fileContent);
+      String currentLine;
+      while ((currentLine = reader.readLine()) != null) {
+        System.out.println(currentLine);
+      }
+
     } catch (Exception e) {
       System.out.println(e.getMessage());
     }
