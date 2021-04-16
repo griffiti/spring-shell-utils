@@ -1,0 +1,103 @@
+##################### STS
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+
+##################### NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+
+##################### SVN
+.svn/
+.svn
+
+
+##################### IntelliJ
+.idea/
+*.ipr
+*.iws
+*.iml
+out/
+.idea_modules
+atlassian-ide-plugin.xml
+
+
+##################### Maven
+target/
+HELP.md
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.next
+release.properties
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+
+##################### Eclipse
+*.pydevproject
+.metadata
+.gradle
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.project
+.classpath
+.metadata/
+
+
+##################### External tool builders
+.externalToolBuilders/
+LOG_DIR_IS_UNDEFINED/
+
+
+##################### Locally stored Eclipse launch configurations
+*.launch
+
+
+##################### CDT-specific
+.cproject
+
+
+##################### PDT-specific
+.buildpath
+
+
+##################### sbteclipse plugin
+.target
+
+
+##################### TeXlipse plugin
+.texlipse
+
+
+##################### Gradle
+.gradle
+build/
+
+
+##################### macOS
+**/.DS_Store
+
+
+##################### VSCode
+.vscode/
+.factorypath
