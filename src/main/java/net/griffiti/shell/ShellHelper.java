@@ -170,6 +170,10 @@ public class ShellHelper {
         terminal.writer().println("\r" + ConsoleSequences.DL);
     }
 
+    
+    /** 
+     * @param numLines Number of lines to delete
+     */
     public void deleteLines(int numLines) {
         terminal.writer().println("\r" + String.format(ConsoleSequences.DL_N, numLines));
     }

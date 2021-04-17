@@ -14,6 +14,11 @@ public class LocalDateFormatter implements Formatter {
         this.pattern = pattern;
     }
 
+    
+    /** 
+     * @param value Value to format
+     * @return String[]
+     */
     @Override
     public String[] format(Object value) {
         LocalDate localDate = (LocalDate) value;

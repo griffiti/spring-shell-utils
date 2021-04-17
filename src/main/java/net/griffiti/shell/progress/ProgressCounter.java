@@ -6,14 +6,13 @@ import net.griffiti.shell.ConsoleSequences;
 
 /**
  * Console based implementation of progress counter.
- * Provides two public methods:<br/>
+ * Provides two public methods:<br>
  * <ul>
  * <li>1. Display just spinner</li>
  * <li>2. Display spinner in combination with message and numeric counter.</li>
  * </ul>
  *
- * @author: Domagoj Madunić
- * 
+ * @author Domagoj Madunić
  * @author griffiti - additional updates
  */
 public class ProgressCounter {
@@ -55,6 +54,10 @@ public class ProgressCounter {
         }
     }
 
+    
+    /** 
+     * @param message Message to display for progress
+     */
     public void display(String message) {
         if (!started) {
             terminal.writer().println();
@@ -67,6 +70,11 @@ public class ProgressCounter {
         terminal.flush();
     }
 
+    
+    /** 
+     * @param count Count to display for progress
+     * @param message Message to display for progress
+     */
     public void display(int count, String message) {
         if (!started) {
             terminal.writer().println();
@@ -96,6 +104,11 @@ public class ProgressCounter {
         terminal.flush();
     }
 
+    
+    /** 
+     * @param progress Progress to display
+     * @return String
+     */
     private String getDisplayOutput(String progress) {
         StringBuilder output = new StringBuilder();
         if (this.spinnerPosition == SpinnerPosition.LEFT) {
@@ -111,6 +124,10 @@ public class ProgressCounter {
         return output.toString();
     }
 
+    
+    /** 
+     * @return char
+     */
     private char getSpinnerChar() {
         char spinChar = spinner[spinCounter];
         spinCounter++;
@@ -120,44 +137,84 @@ public class ProgressCounter {
         return spinChar;
     }
 
+    
+    /** 
+     * @return String
+     */
     //--- set / get methods ---------------------------------------------------
 
     public String getPattern() {
         return this.pattern;
     }
 
+    
+    /** 
+     * @param pattern Patter used for progress message
+     */
     public void setPattern(String pattern) {
         this.pattern = pattern;
     }
 
+    
+    /** 
+     * @return char[]
+     */
     public char[] getSpinner() {
         return this.spinner;
     }
 
+    
+    /** 
+     * @param spinner Characters used to display animated spinner
+     */
     public void setSpinner(char[] spinner) {
         this.spinner = spinner;
     }
 
+    
+    /** 
+     * @return SpinnerPosition
+     */
     public SpinnerPosition getSpinnerPosition() {
         return this.spinnerPosition;
     }
 
+    
+    /** 
+     * @param spinnerPosition Location of spinner next to message
+     */
     public void setSpinnerPosition(SpinnerPosition spinnerPosition) {
         this.spinnerPosition = spinnerPosition;
     }
 
+    
+    /** 
+     * @return boolean
+     */
     public boolean getStarted() {
         return this.started;
     }
 
+    
+    /** 
+     * @param started Set progress started
+     */
     public void setStarted(boolean started) {
         this.started = started;
     }
 
+    
+    /** 
+     * @return int
+     */
     public int getSpinCounter() {
         return this.spinCounter;
     }
 
+    
+    /** 
+     * @param spinCounter Count used for progress
+     */
     public void setSpinCounter(int spinCounter) {
         this.spinCounter = spinCounter;
     }

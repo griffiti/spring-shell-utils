@@ -31,6 +31,12 @@ public class BasicTableRenderer implements TableRenderer {
         this.width = tableWidth;
     }
 
+    
+    /** 
+     * @param headers List of headers to display for table
+     * @param tableDataSource Data source for table
+     * @return String
+     */
     @Override
     public String render(List<String> headers, TableDataSource tableDataSource) {
         AsciiTable at = new AsciiTable();
@@ -47,20 +53,36 @@ public class BasicTableRenderer implements TableRenderer {
     }
 
 
+    
+    /** 
+     * @param width Width of rendered table
+     */
     // ----- get / set methods -------------------------------------------------------------
 
     public void setWidth(int width) {
         this.width = width;
     }
 
+    
+    /** 
+     * @return int
+     */
     public int getWidth() {
         return width;
     }
 
+    
+    /** 
+     * @param cwc Set defined column width calculator
+     */
     public void setCwc(AT_ColumnWidthCalculator cwc) {
         this.cwc = cwc;
     }
 
+    
+    /** 
+     * @return AT_ColumnWidthCalculator
+     */
     public AT_ColumnWidthCalculator getCwc() {
         return cwc;
     }

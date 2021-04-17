@@ -33,6 +33,12 @@ public class PageableTableRenderer implements TableRenderer {
             this.inputReader = inputReader;
     }
 
+    
+    /** 
+     * @param headers List of headers to display for table
+     * @param tableDataSource Data source for table
+     * @return String
+     */
     @Override
     public String render(List<String> headers, TableDataSource tableDataSource) {
         PageableTableDataSource pageableTableDataSource = new PageableTableDataSource(tableDataSource);
@@ -97,12 +103,20 @@ public class PageableTableRenderer implements TableRenderer {
         }
     }
 
+    
+    /** 
+     * @return int
+     */
     // ---- set /get methods ---------------------------------------------------------------------------------
 
     public int getPageSize() {
         return pageSize;
     }
 
+    
+    /** 
+     * @param pageSize Size of each page
+     */
     public void setPageSize(int pageSize) {
         this.pageSize = pageSize;
     }

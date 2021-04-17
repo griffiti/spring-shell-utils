@@ -28,10 +28,21 @@ public class InputReader {
         this.mask = mask != null ? mask : DEFAULT_MASK;
     }
 
+    
+    /** 
+     * @param prompt Prompt presented to user
+     * @return String
+     */
     public String prompt(String  prompt) {
         return prompt(prompt, null, true);
     }
 
+    
+    /** 
+     * @param prompt Prompt presented to user
+     * @param defaultValue Default value if non given
+     * @return String
+     */
     public String prompt(String  prompt, String defaultValue) {
         return prompt(prompt, defaultValue, true);
     }
@@ -39,10 +50,10 @@ public class InputReader {
     /**
      * Prompts user for input.
      *
-     * @param prompt
-     * @param defaultValue
-     * @param echo
-     * @return
+     * @param prompt Prompt presented to user
+     * @param defaultValue Default value if non given
+     * @param echo True to echo back to user
+     * @return String
      */
     public String prompt(String  prompt, String defaultValue, boolean echo) {
         String answer = "";
@@ -58,15 +69,19 @@ public class InputReader {
         return answer;
     }
 
-    /**
+    
+    /** 
      * Loops until one of the `options` is provided. Pressing return is equivalent to
      * returning `defaultValue`.
-     * <br/>
-     * Passing null for defaultValue signifies that there is no default value.<br/>
+     * <br>
+     * Passing null for defaultValue signifies that there is no default value.<br>
      * Passing "" or null among optionsAsList means that empty answer is allowed, in these cases this method returns
      * empty String "" as the result of its execution.
      *
-     *
+     * @param prompt Prompt presented to user
+     * @param defaultValue Default value if non given
+     * @param optionsAsList List of options
+     * @return String
      */
     public String promptWithOptions(String  prompt, String defaultValue, List<String> optionsAsList) {
         String answer;
@@ -84,6 +99,12 @@ public class InputReader {
         return answer;
     }
 
+    
+    /** 
+     * @param defaultValue Default value if non given
+     * @param optionsAsList Provide a list of options
+     * @return List<String>
+     */
     private List<String> formatOptions(String defaultValue, List<String> optionsAsList) {
         List<String> result = new ArrayList<>();
         for (String option : optionsAsList) {
@@ -101,9 +122,16 @@ public class InputReader {
         return result;
     }
 
-    /**
+    
+    /** 
      * Loops until one value from the list of options is selected, printing each option on its own line.
-     *
+     * 
+     * @param headingMessage Heading to dipslay
+     * @param promptMessage Prompt message displayed to user
+     * @param options Map of options to choose
+     * @param ignoreCase Ignore case in selection
+     * @param defaultValue Default value to use
+     * @return String
      */
     public String selectFromList(String headingMessage, String promptMessage, Map<String, String> options, boolean ignoreCase, String defaultValue) {
         String answer;
@@ -135,6 +163,13 @@ public class InputReader {
         return answer;
     }
 
+    
+    /** 
+     * @param l Set of strings
+     * @param s String to check in set
+     * @param ignoreCase True to ignore case
+     * @return boolean
+     */
     private boolean containsString(Set <String> l, String s, boolean ignoreCase){
         if (!ignoreCase) {
             return l.contains(s);

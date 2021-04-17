@@ -20,16 +20,30 @@ public class BeanTableModelBuilder {
         this.objectMapper = objectMapper;
     }
 
+    
+    /** 
+     * @param labels Labels to use with table
+     * @return BeanTableModelBuilder
+     */
     public BeanTableModelBuilder withLabels(LinkedHashMap<String, Object> labels) {
         this.labels = labels;
         return this;
     }
 
+    
+    /** 
+     * @param header Array of headers for table
+     * @return BeanTableModelBuilder
+     */
     public BeanTableModelBuilder withHeader(String[] header) {
         this.header = header;
         return this;
     }
 
+    
+    /** 
+     * @return TableModel
+     */
     public TableModel build() {
         Map<String, String> map = objectMapper.convertValue(bean, new TypeReference<Map<String, String>>() {});
 

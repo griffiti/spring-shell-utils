@@ -24,10 +24,19 @@ public class ProgressBar {
         this.terminal = terminal;
     }
 
+    
+    /** 
+     * @param percentage Percentage of progress
+     */
     public void display(int percentage) {
         display(percentage, null);
     }
 
+    
+    /** 
+     * @param percentage Percentage of progress
+     * @param statusMessage Status message to display with progress
+     */
     public void display(int percentage, String statusMessage) {
         if (!started) {
             started = true;
@@ -50,44 +59,84 @@ public class ProgressBar {
         started = false;
     }
 
+    
+    /** 
+     * @return String
+     */
     //--- set / get methods ---------------------------------------------------
 
     public String getDoneMarker() {
         return doneMarker;
     }
 
+    
+    /** 
+     * @param doneMarker Marker to use when progress completes
+     */
     public void setDoneMarker(String doneMarker) {
         this.doneMarker = doneMarker;
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getRemainsMarker() {
         return remainsMarker;
     }
 
+    
+    /** 
+     * @param remainsMarker Marking when progress remains
+     */
     public void setRemainsMarker(String remainsMarker) {
         this.remainsMarker = remainsMarker;
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getLeftDelimiter() {
         return leftDelimiter;
     }
 
+    
+    /** 
+     * @param leftDelimiter Left delimiter
+     */
     public void setLeftDelimiter(String leftDelimiter) {
         this.leftDelimiter = leftDelimiter;
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getRightDelimiter() {
         return rightDelimiter;
     }
 
+    
+    /** 
+     * @param rightDelimiter Right delimiter
+     */
     public void setRightDelimiter(String rightDelimiter) {
         this.rightDelimiter = rightDelimiter;
     }
 
+    
+    /** 
+     * @return boolean
+     */
     public boolean isStarted() {
         return started;
     }
 
+    
+    /** 
+     * @param started Set progress started
+     */
     public void setStarted(boolean started) {
         this.started = started;
     }

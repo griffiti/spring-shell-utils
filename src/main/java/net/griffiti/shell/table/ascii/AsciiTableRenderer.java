@@ -18,6 +18,12 @@ public class AsciiTableRenderer {
         this.objectMapper = objectMapper;
    }
 
+    
+    /** 
+     * @param entity Entity object for table
+     * @param tableHeader Header to display for table
+     * @return String
+     */
     public String entityTable(Object entity, String tableHeader) {
         Map<String, String> map = objectMapper.convertValue(entity, new TypeReference<Map<String, String>>() {});
 

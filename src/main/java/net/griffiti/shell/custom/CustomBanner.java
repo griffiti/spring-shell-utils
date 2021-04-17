@@ -1,11 +1,9 @@
 package net.griffiti.shell.custom;
 
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.PrintStream;
-import java.nio.file.Files;
 
 import org.springframework.boot.Banner;
 import org.springframework.core.env.Environment;
@@ -17,6 +15,12 @@ import net.griffiti.shell.ConsoleSequences;
  */
 public class CustomBanner implements Banner {
 
+  
+  /** 
+   * @param environment Spring environment
+   * @param sourceClass Source class reference
+   * @param out Stream to send out
+   */
   @Override
   public void printBanner(Environment environment, Class<?> sourceClass, PrintStream out) {
     out.print(ConsoleSequences.CLS);
@@ -28,11 +32,11 @@ public class CustomBanner implements Banner {
 
       String currentLine;
       while ((currentLine = reader.readLine()) != null) {
-        System.out.println(currentLine);
+        out.println(currentLine);
       }
 
     } catch (Exception e) {
-      System.out.println(e.getMessage());
+      out.println(e.getMessage());
     }
   }
   

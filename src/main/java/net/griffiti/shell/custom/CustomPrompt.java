@@ -18,6 +18,10 @@ public class CustomPrompt implements PromptProvider {
   @Value("${shell.prompt.color:BLUE}")
   public String color;
 
+  
+  /** 
+   * @return AttributedString
+   */
   @Override
   public AttributedString getPrompt() {
     AttributedStyle style = AttributedStyle.DEFAULT.foreground(PromptColor.valueOf(color).toJlineAttributedStyle());

@@ -18,6 +18,10 @@ public class ProgressCounterService {
     this.progressCounter = progressCounter;
   }
 
+  
+  /** 
+   * @param message Message to display for progress
+   */
   public void startProgress(String message) {
     progress = new ProgressCounterRunnable(progressCounter, message);
 

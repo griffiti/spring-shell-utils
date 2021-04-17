@@ -1,7 +1,7 @@
 # spring-shell-utils
 
 ## Introduction
-[Spring Shell](https://spring.io/projects/spring-shell) is a great way for developers to create interactive shell applications. This utility collection provides extra features to help develop Spring Shell solutions.
+Spring Shell Utils library provides extra features to help develop Spring Shell applications.
 
 ### Features
 - Custom exit command with forced system exit. This is useful when shell commands include reactive code with unexpired threads.
