@@ -1,5 +1,4 @@
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/net.griffiti/spring-shell-utils/badge.svg)](https://maven-badges.herokuapp.com/maven-central/net.griffiti/spring-shell-utils)
-
+[![Maven Central](https://img.shields.io/maven-central/v/net.griffiti/spring-shell-utils.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22net.griffiti%22%20AND%20a:%22spring-shell-utils%22)
 
 # spring-shell-utils
 
