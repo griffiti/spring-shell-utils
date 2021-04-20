@@ -1,3 +1,6 @@
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/net.griffiti/spring-shell-utils/badge.svg)](https://maven-badges.herokuapp.com/maven-central/net.griffiti/spring-shell-utils)
+
+
 # spring-shell-utils
 
 ## Introduction
