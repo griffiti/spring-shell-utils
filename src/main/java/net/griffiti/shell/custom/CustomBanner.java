@@ -15,7 +15,6 @@ import net.griffiti.shell.ConsoleSequences;
  */
 public class CustomBanner implements Banner {
 
-  
   /** 
    * @param environment Spring environment
    * @param sourceClass Source class reference
