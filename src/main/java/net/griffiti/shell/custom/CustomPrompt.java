@@ -12,7 +12,7 @@ import net.griffiti.shell.PromptColor;
  */
 public class CustomPrompt implements PromptProvider {
 
-  @Value("${shell.prompt.display:>}")
+  @Value("${shell.prompt.display:shell>}")
   public String display;
 
   @Value("${shell.prompt.color:BLUE}")

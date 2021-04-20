@@ -1,0 +1,33 @@
+{
+  "groups": [
+    {"name": "shell"},
+    {"name": "shell.prompt"},
+    {"name": "shell.out"}
+  ],
+  "properties": [
+    {
+      "name": "shell.prompt.display",
+      "type": "java.lang.String"
+    },
+    {
+      "name": "shell.prompt.color",
+      "type": "java.lang.String"
+    },
+    {
+      "name": "shell.out.info",
+      "type": "java.lang.String"
+    },
+    {
+      "name": "shell.out.success",
+      "type": "java.lang.String"
+    },
+    {
+      "name": "shell.out.warning",
+      "type": "java.lang.String"
+    },
+    {
+      "name": "shell.out.error",
+      "type": "java.lang.String"
+    }
+  ]
+}
