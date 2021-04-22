@@ -1,6 +1,4 @@
-[![Maven Central](https://img.shields.io/maven-central/v/net.griffiti/spring-shell-utils.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22net.griffiti%22%20AND%20a:%22spring-shell-utils%22)
-
-# spring-shell-utils
+# Spring Shell Utils  [![Maven Central](https://img.shields.io/maven-central/v/net.griffiti/spring-shell-utils.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22net.griffiti%22%20AND%20a:%22spring-shell-utils%22)
 
 ## Introduction
 Spring Shell Utils library provides extra features to help develop Spring Shell applications.
@@ -14,8 +12,33 @@ Spring Shell Utils library provides extra features to help develop Spring Shell 
 - Custom prompt support.
 - Many options can be configured via application.(yml|properties) file.
 
-### Getting Started
-This project is built with [maven](https://maven.apache.org/). Simply clone the repo and run `mvn clean install` to get a build in your local repository. Future versions will be available via [Maven Central](https://search.maven.org/).
+## Getting Started
+This project is built with [maven](https://maven.apache.org/) and is [published](https://search.maven.org/search?q=g:%22net.griffiti%22%20AND%20a:%22spring-shell-utils%22) to Maven Central. To get started you can either include as a maven dependency or clone this repo and build locally.
 
-### Project Origin
+### Maven
+Including as a maven dependency is the quickest and easiest way to get started. Just edit your `pom.xml` file and add the following to your dependencies section.
+
+```xml
+<dependencies>
+  ...
+  <dependency>
+    <groupId>net.griffiti</groupId>
+    <artifactId>spring-shell-utils</artifactId>
+    <version>1.0.4</version>
+  </dependency>
+</dependencies>
+```
+### Clone Locally
+You can also clone this repo locally and build the package. You can then reference the jar file or install to your local maven repo.
+
+```console
+git clone https://github.com/griffiti/spring-shell-utils.git
+cd spring-shell-utils
+mvn clean install -DskipTests
+```
+
+## Project Origin
 This project was inspired by the original work of [Domagoj Madunic](https://github.com/dmadunic) and the [ag04-shell-utils](https://github.com/ag04/ag04-shell-utils) project.
+
+## License
+Spring Shell Utils is open source software released under the [Apache 2.0 license](https://www.apache.org/licenses/LICENSE-2.0.html).
